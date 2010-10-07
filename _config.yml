@@ -1,0 +1,5 @@
+permalink: /:year/:month/:day/:title 
+paginate: 3
+title: Juan C. Muller's blog
+blog: /
+source: _source
