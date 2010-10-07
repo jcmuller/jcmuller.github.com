@@ -1,0 +1,7 @@
+{% for category in page.categories %}
+	<a href="/{{category | downcase}}.html">
+		{{ category }} ({{ site.categories[category] | size }}){% unless forloop.last %}, {% endunless %}
+	</a>
+
+{% endfor %}
+
