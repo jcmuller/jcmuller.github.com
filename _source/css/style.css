@@ -1,20 +1,5 @@
-@font-face
-{
-	font-family: "Droid Sans Mono";
-	src: url("/resources/DroidSansMono.ttf");
-}
-
-@font-face
-{
-	font-family: "Droid Sans";
-	src: url("/resources/DroidSans.ttf");
-}
-
-@font-face
-{
-	font-family: "Droid Serif";
-	src: url("/resources/DroidSerif-Regular.ttf");
-}
+@import url("/css/fonts.css");
+@import url("/css/ribbon.css");
 
 body
 {
@@ -22,6 +7,7 @@ body
 	background-color: lightgrey;
 	width: 600px;
 	margin: 15px auto;
+	font-size: 16px;
 }
 
 h1
@@ -63,8 +49,9 @@ div.content
 
 div.post p
 {
-	font-family: Times New Roman, serif;
+	font-family: "Times New Roman", serif;
 	text-indent: 30px;
+	font-size: 16px;
 }
 
 div.footer
@@ -89,7 +76,8 @@ div.title
 
 div.content span.author,
 div.content span.date,
-div.content span.categories
+div.content span.categories,
+div.content span.tags
 {
 	font-style: italic;
 	color: #333;
