@@ -1,5 +1,6 @@
-permalink: /:year/:month/:day/:title 
+permalink: /archive/:categories/:year/:month/:day/:title 
 paginate: 5
-title: Juan C. Muller
+title: Juan C. M&uuml;ller
 blog: /
 source: _source
+
