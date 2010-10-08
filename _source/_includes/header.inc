@@ -3,5 +3,10 @@
 </a>
 
 <h1>{{ site.title }}</h1>
-<h2>{{ page.title }}</h2>
 <h3><a href="{{ site.blog }}">Home</a></h3>
+
+{% if page.title %}
+	<div class="content lesspadding">
+		<h2>{{ page.title }}</h2>
+	</div>
+{% endif %}
