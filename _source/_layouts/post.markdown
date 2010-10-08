@@ -8,7 +8,8 @@
 		<div class="content lesserpadding">
 			On <span class="date">{{ page.date | date: '%B %d, %Y' }}</span>
 			by <span class="author">{{ page.author }}</span>,
-			filed under <span class="categories">{% include categories.html %}</span>
+			filed under <span class="categories">{% include categories.html %}</span>;
+			tags <span class="tags">{% include tags.inc %}</span>
 		</div>
 
 		<div class="content lesserpadding">
