@@ -9,7 +9,7 @@
 </div>
 
 <div class="current_page">
-	{{ paginator.page }}
+	page {{ paginator.page }}
 </div>
 			
 <div class="next_page">
