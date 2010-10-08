@@ -40,12 +40,13 @@ sub insert_category
 {
 	my ($self, $new_category_entry) = @_;
 
-	my $file_name = "../_source/_includes/tagcloud.inc";
-
-	my $categories = new FileHandle($file_name, 'r') or croak "Couldn't open $file_name for reading $!";
+	my $file_name = "../_source/_includes/category_list.inc";
 
 	my @contents;
 
+	## Read the current categories file.
+
+	my $categories = new FileHandle($file_name, 'r') or croak "Couldn't open $file_name for reading $!";
 	if (defined $categories)
 	{
 		@contents = $categories->getlines;
@@ -66,11 +67,39 @@ sub insert_category
 			push @new_contents, $_;
 		}
 
+		my (@pre, @suf, @lines, $found);
+
+		for (@new_contents)
+		{
+			my $cat = 1 if (/<!category>/);
+
+			if (!$found and !$cat)
+			{
+				push @pre, $_;
+			}
+			elsif ($cat)
+			{
+				$found = 1;
+				push @lines, $_;
+			}
+			else
+			{
+				push @suf, $_;
+			}
+		}
+
+		@lines = sort @lines;
+
+		my @sorted_content = (@pre, @lines, @suf);
+
+
+		## Write the new categories file
+
 		my $categories = new FileHandle($file_name, '>') or croak "Couldn't open $file_name for writing $!";
 
 		if (defined $categories)
 		{
-			print $categories join '', @new_contents;
+			print $categories join '', @sorted_content;
 			$categories->close();
 		}
 	}
