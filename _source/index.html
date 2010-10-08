@@ -3,29 +3,40 @@ layout: default
 pagetitle: Juan C. Muller's blog
 ---
 
+<div class="content lesspadding" style="padding-bottom: 10px;">
+	{% include tagcloud.inc %}
+</div>
+
 {% for page in paginator.posts %}
-	<h2 class="title"><a href="{{ page.url }}">{{ page.title }}</a></h2>
-	<div class="post-{{ page.id }}">
-		
-		<p class="author">
-			Added by <span class="author">{{ page.author }}</span>
-			on <span class="date">{{ page.date | date: '%B %d, %Y' }}</span>
-			in <span class="categories">{% include categories.html %}</span>
-		</p>
-				
-		<div class="entrybody post">
-			{% if page.excerpt %}
-				{{ page.excerpt }}
-			{% else %}
-				{{ page.content | truncatewords: 100 | textilize }}
-			{% endif %}
+	<div class="content lesspadding">
+		<h2 class="title"><a href="{{ page.url }}">{{ page.title }}</a></h2>
+		<div class="post-{{ page.id }}">
+			
+			<p class="author">
+				On <span class="date">{{ page.date | date: '%B %d, %Y' }}</span>
+				by <span class="author">{{ page.author }}</span>,
+				filed under <span class="categories">{% include categories.html %}</span>
+			</p>
+					
+			<div class="entrybody post">
+				{% if page.excerpt %}
+					{{ page.excerpt | textilize }}
+				{% else %}
+					{{ page.content | truncatewords: 50 | textilize }}
+				{% endif %}
+			</div>
 		</div>
 	</div>
 {% endfor %}
 
-{% include paginator.inc %}
+<div class="content" style="padding: 15px;">
+	{% include paginator.inc %}
+</div>
 
-<h2>Prominent Open Source Projects</h2>
-<ul class="posts">
-	<li><a href="http://github.com/mojombo/jekyll/">Jekyll:</a> A simple, blog aware, static site generator (used for this site).</li>
-</ul>
+<div class="content">
+	<h2 style="margin: 0; margin-bottom: 15px;">Prominent Open Source Projects</h2>
+	<ul class="posts">
+		<li><a href="http://github.com/mojombo/jekyll/">Jekyll:</a> A simple, blog
+		aware, static site generator (used for this site).</li>
+	</ul>
+</div>
