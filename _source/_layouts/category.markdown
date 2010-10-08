@@ -5,9 +5,7 @@
 	<body>
 		{% include header.inc %}
 
-		<div class="content">
-			{{ content }}
-		</div>
+		{{ content }}
 
 		{% include footer.inc %}
 	</body>
