@@ -44,7 +44,12 @@ pagetitle: Juan C. M&uuml;ller
 	<ul>
 		{% for post in site.posts %}
 			<li>
-			<a href="{{ post.url }}">{{ post.date | date_to_string }}: {{ post.title }}</a>
+				<a href="{{ post.url }}">{{ post.date | date_to_string }}: {{ post.title }}</a>
+				{% if post.excerpt %}
+					<ul>
+						<li>{{ post.excerpt }}</li>
+					</ul>
+				{% endif %}
 			</li>
 		{% endfor %}
 	</ul>
