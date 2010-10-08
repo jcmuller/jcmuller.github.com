@@ -1,5 +1,5 @@
 permalink: /:year/:month/:day/:title 
-paginate: 3
+paginate: 5
 title: Juan C. Muller
 blog: /
 source: _source
