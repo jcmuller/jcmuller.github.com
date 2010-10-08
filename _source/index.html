@@ -1,36 +1,53 @@
 ---
 layout: default
-pagetitle: Juan C. Muller's blog
+pagetitle: Juan C. M&uuml;ller
 ---
 
-<div class="content lesspadding">
-	{% include tagcloud.inc %}
-</div>
+{% if site.categories.size > 0 %}
+	<div class="content lesspadding" style="padding: 5px 15px;">
+		{% include category_list.inc %}
+	</div>
+{% endif %}
 
-{% for page in paginator.posts %}
+{% for post in paginator.posts %}
 	<div class="content lesspadding">
-		<h2 class="title"><a href="{{ page.url }}">{{ page.title }}</a></h2>
-		<div class="post-{{ page.id }}">
+		<h2 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+		<div class="post-{{ post.id }}">
 			
 			<p class="author">
-				On <span class="date">{{ page.date | date: '%B %d, %Y' }}</span>
-				by <span class="author">{{ page.author }}</span>,
-				filed under <span class="categories">{% include categories.html %}</span>
+				On <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
+				by <span class="author">{{ post.author }}</span>,
+				filed under <span class="categories">{% include categories.html %}</span>;
+				tags <span class="tags">{% include tags.inc %}</span>
 			</p>
 					
 			<div class="entrybody post">
-				{% if page.excerpt %}
-					{{ page.excerpt | textilize }}
+				{% if post.excerpt %}
+					{{ post.excerpt | textilize }}
 				{% else %}
-					{{ page.content | truncatewords: 50 | textilize }}
+					{{ post.content | truncatewords: 50 | textilize }}
 				{% endif %}
 			</div>
 		</div>
 	</div>
 {% endfor %}
 
-<div class="content" style="padding: 15px;">
-	{% include paginator.inc %}
+
+{% if paginator.posts.size > 0 %}
+	<div class="content" style="padding: 15px;">
+		{% include paginator.inc %}
+	</div>
+{% endif %}
+
+<div class="content">
+	<h2 style="margin: 0; margin-bottom: 15px;">Blog Entries</h2>
+	<ul>
+		{% for post in site.posts %}
+			<li>
+			<a href="{{ post.url }}">{{ post.date | date_to_string }}: {{ post.title }}</a>
+			</li>
+		{% endfor %}
+	</ul>
 </div>
 
 <div class="content">
