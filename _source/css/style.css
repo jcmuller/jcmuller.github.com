@@ -33,9 +33,9 @@ div.content
 	padding-bottom: 30px;
 	position: relative;
 	width: 570px;
-	-moz-box-shadow: 5px 5px 5px #555;
-	-webkit-box-shadow: 5px 5px 5px #555;
-	box-shadow: 5px 5px 5px #555;
+	-moz-box-shadow: 5px 5px 5px #777;
+	-webkit-box-shadow: 5px 5px 5px #777;
+	box-shadow: 5px 5px 5px #777;
 }
 
 div.post p
@@ -103,4 +103,19 @@ img.fork_me
 	right: 0;
 	border: 0;
 	z-index: 20;
+}
+
+div.content.lesspadding
+{
+	padding: 0 15px;
+}
+
+div.content.lesserpadding
+{
+	padding: 10px 15px;
+}
+
+ul
+{
+	margin: 5px;
 }
