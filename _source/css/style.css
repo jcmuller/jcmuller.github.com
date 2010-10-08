@@ -1,9 +1,32 @@
+@font-face
+{
+	font-family: "Droid Sans Mono";
+	src: url("/resources/DroidSansMono.ttf");
+}
+
+@font-face
+{
+	font-family: "Droid Sans";
+	src: url("/resources/DroidSans.ttf");
+}
+
+@font-face
+{
+	font-family: "Droid Serif";
+	src: url("/resources/DroidSerif-Regular.ttf");
+}
+
 body
 {
-	font-family: Helvetica, sans-serif;
+	font-family: "Droid Sans", Helvetica, sans-serif;
 	background-color: lightgrey;
 	width: 600px;
 	margin: 15px auto;
+}
+
+h1
+{
+	font-family: "Droid Sans Mono", "Bitstream Sans Mono", monospace;
 }
 
 a:active,
@@ -18,7 +41,7 @@ a:hover
 a:hover
 {
 	color: #bbb;
-	background-color: #111;
+	background-color: #555;
 }
 
 div.content
@@ -118,4 +141,27 @@ div.content.lesserpadding
 ul
 {
 	margin: 5px;
+}
+
+span.category-cloud
+{
+	padding-top: 10px;
+}
+
+span.category-cloud span.title,
+span.category-cloud ul,
+span.category-cloud li
+{
+	display: inline;
+}
+
+span.category-cloud ul
+{
+	padding: 0;
+}
+
+span.category-cloud ul,
+span.category-cloud li
+{
+	list-style: none;
 }
