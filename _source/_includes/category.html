@@ -10,8 +10,7 @@
 	<p class="author">
 	Added by {{ post.author }}
 	on {{ post.date | date: '%B %d, %Y' }}
-
-in {% for category in post.categories %}
+	in {% for category in post.categories %}
 	<a href="/{{category | downcase}}.html">
 		{{ category }} ({{ site.categories[category] | size }}){% unless forloop.last %},
 		{% endunless %}
