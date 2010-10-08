@@ -1,0 +1,15 @@
+div.ribbon
+{
+	font-family: Collegiate;
+	font-size: 16px;
+	color: white;
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	top: 0;
+	left: 0;
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
