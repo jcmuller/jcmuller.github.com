@@ -1,6 +1,8 @@
 ---
 layout: default
 pagetitle: Juan C. M&uuml;ller
+tags: web development, software development, development, cooking, cycling
+excerpt: The author wants to share some of his insights in the world of software and web development, cycling, cooking and healthy living.
 ---
 
 {% if site.categories.size > 0 %}
@@ -42,16 +44,20 @@ pagetitle: Juan C. M&uuml;ller
 <div class="content">
 	<h2 style="margin: 0; margin-bottom: 15px;">Blog Entries</h2>
 	<ul>
-		{% for post in site.posts %}
-			<li>
-				<a href="{{ post.url }}">{{ post.date | date_to_string }}: {{ post.title }}</a>
-				{% if post.excerpt %}
-					<ul>
-						<li>{{ post.excerpt }}</li>
-					</ul>
-				{% endif %}
-			</li>
-		{% endfor %}
+		{% if site.posts.size > 0 %}
+			{% for post in site.posts %}
+				<li>
+					<a href="{{ post.url }}">{{ post.date | date_to_string }}: {{ post.title }}</a>
+					{% if post.excerpt %}
+						<ul>
+							<li>{{ post.excerpt }}</li>
+						</ul>
+					{% endif %}
+				</li>
+			{% endfor %}
+		{% else %}
+			<li>Coming soon.</li>
+		{% endif %}
 	</ul>
 </div>
 
