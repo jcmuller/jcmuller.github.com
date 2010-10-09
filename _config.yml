@@ -2,5 +2,3 @@ permalink: /archive/:categories/:year/:month/:day/:title
 paginate: 5
 title: Juan C. M&uuml;ller
 blog: /
-source: _source
-
