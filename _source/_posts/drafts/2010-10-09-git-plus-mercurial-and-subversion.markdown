@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Git + Mercurial + Subversion
-author: Juan C. Muller
+author: Juan C. M&uuml;ller
 categories:
  - development
 tags:

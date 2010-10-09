@@ -1,7 +1,7 @@
 ---
 layout: post
 title: On why I like VIM
-author: Juan C. Muller
+author: Juan C. M&uuml;ller
 categories:
  - development
 tags:
