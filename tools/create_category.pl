@@ -18,9 +18,9 @@ use HTML::Template;
 use FileHandle;
 use Carp;
 
-=head2 METHODS
+=head1 METHODS
 
-=head3 new
+=head2 new
 
 Default constructor. Takes no arguments.
 
@@ -35,7 +35,7 @@ sub new
 	return $self;
 }
 
-=head3 work
+=head2 work
 
 Process arguments passed in to program, one at a time, creating a new category
 page and a category line in the category file for each.
@@ -195,7 +195,7 @@ sub _update_category_list
 	return $template->output;
 }
 
-=head3 print_usage
+=head2 print_usage
 
 Print out to console a nice message about the usage.
 
