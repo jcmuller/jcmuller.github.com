@@ -40,7 +40,7 @@ sub insert_category
 {
 	my ($self, $new_category_entry) = @_;
 
-	my $file_name = "../_source/_includes/category_list.inc";
+	my $file_name = "_includes/category_list.inc";
 
 	my @contents;
 
@@ -109,7 +109,7 @@ sub write_category_page
 {
 	my ($self, $name, $category_page_contents) = @_;
 
-	my $file_name = "../_source/$name.html";
+	my $file_name = "$name.html";
 
 	my $category_file = new FileHandle($file_name, '>') or croak "Couldn't open $file_name for writing: $!";
 
