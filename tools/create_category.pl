@@ -8,9 +8,23 @@ use warnings;
 
 package CreateCategory;
 
+=head1 NAME
+
+CreateCategory
+
+=cut
+
 use HTML::Template;
 use FileHandle;
 use Carp;
+
+=head2 METHODS
+
+=head3 new
+
+Default constructor. Takes no arguments.
+
+=cut
 
 sub new
 {
@@ -21,22 +35,31 @@ sub new
 	return $self;
 }
 
+=head3 work
+
+Process arguments passed in to program, one at a time, creating a new category
+page and a category line in the category file for each.
+
+=cut
+
 sub work
 {
 	my ($self, @args) = @_;
 
 	for (@args)
 	{
-		my %templateVars = $self->create_vars($_);
-		my $category_page_contents = $self->create_category_page(%templateVars);
-		my $new_category_entry = $self->update_category_list(%templateVars);
+		my %templateVars = $self->_process_template_variables($_);
+		my $category_page_contents = $self->_create_category_page(%templateVars);
+		my $new_category_entry = $self->_update_category_list(%templateVars);
 
-		$self->write_category_page($_, $category_page_contents);
-		$self->insert_category($new_category_entry);
+		$self->_write_category_page($_, $category_page_contents);
+		$self->_insert_category($new_category_entry);
 	}
 }
 
-sub insert_category
+# Insert new category in the categories file.
+
+sub _insert_category
 {
 	my ($self, $new_category_entry) = @_;
 
@@ -105,7 +128,9 @@ sub insert_category
 	}
 }
 
-sub write_category_page
+# Write a new category file
+
+sub _write_category_page
 {
 	my ($self, $name, $category_page_contents) = @_;
 
@@ -120,7 +145,9 @@ sub write_category_page
 	}
 }
 
-sub create_vars
+# Construct a nice structure for template
+
+sub _process_template_variables
 {
 	my ($self, $name) = @_;
 
@@ -134,7 +161,9 @@ sub create_vars
 	return %templateVars;
 }
 
-sub create_category_page
+# Get the new category page contents
+
+sub _create_category_page
 {
 	my ($self, %templateVars) = @_;
 
@@ -149,7 +178,9 @@ sub create_category_page
 	return $template->output;
 }
 
-sub update_category_list
+# Write out new category list file
+
+sub _update_category_list
 {
 	my ($self, %templateVars) = @_;
 
@@ -163,6 +194,12 @@ sub update_category_list
 
 	return $template->output;
 }
+
+=head3 print_usage
+
+Print out to console a nice message about the usage.
+
+=cut
 
 sub print_usage
 {
