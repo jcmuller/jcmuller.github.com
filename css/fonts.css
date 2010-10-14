@@ -28,3 +28,9 @@
 	src: url("/resources/Terminus.ttf");
 }
 
+@font-face
+{
+	font-family: "Terminus Mac";
+	src: url("/resources/Terminus-mac.ttf");
+}
+
