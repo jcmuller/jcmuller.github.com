@@ -22,3 +22,9 @@
 	src: url("/resources/DroidSerif-Regular.ttf");
 }
 
+@font-face
+{
+	font-family: "Terminus";
+	src: url("/resources/Terminus.ttf");
+}
+
