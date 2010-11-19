@@ -5,3 +5,14 @@
 		GitHub</a>
 	</p>
 </div>
+
+<div class="browsers-note">
+	This site renders as designed in
+	<img src="/images/firefox.png" alt="Mozilla Firefox" height="16" width="16" />
+	<img src="/images/chrome.png" alt="Google Chrome" height="16" width="16" />
+	<img src="/images/safari.png" alt="Safari" height="16" width="16" />
+	<img src="/images/opera.png" alt="Opera" height="16" width="16" />.
+	I don't really care about
+	<img src="/images/ie.png" alt="IE" height="16" width="16" />.
+</div>
+
