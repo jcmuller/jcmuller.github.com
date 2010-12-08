@@ -7,7 +7,7 @@
 </div>
 
 <div class="browsers-note">
-	This site renders as designed in
+	This site renders as intended in
 	<img src="/images/firefox.png" alt="Mozilla Firefox" height="16" width="16" />
 	<img src="/images/chrome.png" alt="Google Chrome" height="16" width="16" />
 	<img src="/images/safari.png" alt="Safari" height="16" width="16" />
