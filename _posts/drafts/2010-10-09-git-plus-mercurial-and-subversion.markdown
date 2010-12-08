@@ -13,6 +13,9 @@ excerpt: This article describes how to use git with mercurial and subversion rep
 published: false
 ---
 
+TODO
+	Show how to use git as the front end to mercurial and SVN
+
 Let's first start by creating a new *git* repository.
 
 {% highlight bash %}
