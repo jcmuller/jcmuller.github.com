@@ -10,7 +10,8 @@ layout: category
 			
 			<p class="author">
 				On <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
-				by <span class="author">{{ post.author }}</span>
+				by <span class="author">{{ post.author }}</span>;
+				tags: <span class="tags">{% for tag in post.tags %}{{ tag }}{% unless forloop.last %}, {% endunless %}{% endfor %}</span>
 			</p>
 					
 			<div class="entrybody post">
