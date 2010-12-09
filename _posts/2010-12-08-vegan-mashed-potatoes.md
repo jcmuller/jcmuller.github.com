@@ -9,7 +9,7 @@ tags:
  - vegan
  - healthy
 published:false
-excerpt: 
+excerpt: Some delicious vegan mashed potatoes
 ---
 
 **Ingredients**:
