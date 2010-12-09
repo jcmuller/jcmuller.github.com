@@ -26,6 +26,16 @@
 		</div>
 
 		<div class="content lesserpadding">
+			<div class="addthis_toolbox addthis_default_style ">
+				<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+				<a class="addthis_button_tweet"></a>
+				<a class="addthis_counter addthis_pill_style"></a>
+			</div>
+			<script type="text/javascript">var addthis_config = {"data_track_clickback":true};</script>
+			<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=jcmuller"></script>
+		</div>
+
+		<div class="content lesserpadding">
 			<div id="disqus">
 				<div id="disqus_thread"></div>
 				<script type="text/javascript" src="http://disqus.com/forums/juancmullersblog/embed.js"></script>
