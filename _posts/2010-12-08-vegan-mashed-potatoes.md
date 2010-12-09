@@ -2,14 +2,14 @@
 # vim:set ft=markdown:
 layout: post
 title: My First Approach At Vegan Mashed Potatoes
+excerpt: Some delicious vegan mashed potatoes
 author: Juan C. M&uuml;ller
 categories:
  - cooking
 tags:
  - vegan
  - healthy
-published:false
-excerpt: Some delicious vegan mashed potatoes
+published: true
 ---
 
 **Ingredients**:
