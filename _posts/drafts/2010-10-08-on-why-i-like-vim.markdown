@@ -8,7 +8,7 @@ tags:
  - vim
  - text editor
  - source code
-published: true
+published: false
 excerpt: the author illustrates the point on awesomeness
 ---
 
