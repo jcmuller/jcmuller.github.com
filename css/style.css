@@ -12,7 +12,25 @@ body
 
 h1
 {
+	position: relative;
 	font-family: "Droid Sans Mono", "Bitstream Sans Mono", monospace;
+}
+
+h1 div.profiles
+{
+	right: 0;
+	position: absolute;
+}
+
+h1 div.profiles a img
+{
+	width: 20px;
+	height: 20px;
+}
+
+h1 div.profiles a:hover
+{
+	background-color: lightgrey;
 }
 
 a:active,
