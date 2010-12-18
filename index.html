@@ -47,10 +47,6 @@ excerpt: The author wants to share some of his insights in the world of software
 <div class="content">
 	<h2 style="margin: 0; margin-bottom: 15px;">Blog Entries</h2>
 
-	{% for category in site.iterable.categories %}
-		{{ category.name }}
-	{% endfor %}
-
 	<ul>
 		{% if site.categories.cooking %}
 			<li>Cooking
@@ -67,9 +63,7 @@ excerpt: The author wants to share some of his insights in the world of software
 			<li>Cycling
 				<ul>
 					{% for post in site.categories.cycling %}
-						<li>
-						<a href="{{ post.url }}">{{ post.date | date_to_string }}: {{ post.title }}</a> (<span class="tags">{% for tag in post.tags %}{{ tag }}{% unless forloop.last %}, {% endunless %}{% endfor %}</span>)
-						</li>
+						<li><a href="{{ post.url }}">{{ post.date | date_to_string }}: {{ post.title }}</a> (<span class="tags">{% for tag in post.tags %}{{ tag }}{% unless forloop.last %}, {% endunless %}{% endfor %}</span>)</li>
 					{% endfor %}
 				</ul>
 			</li>
