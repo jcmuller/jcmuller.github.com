@@ -24,7 +24,10 @@ stylesheets:
   <div class="content lesspadding" style="padding: 5px 15px;">
     <span class="tag cloud">
       <span class="title">Tags: </span>
-      {{ site | tags }}
+      {% for tag in site.tags %}
+        <a href="/tag/{{ tag[0] }}">
+          {{ tag[0] | join: "/" }} ({{ tag[1] | size }})</a>
+      {% endfor %}
     </span>
   </div>
 
