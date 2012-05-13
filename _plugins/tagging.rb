@@ -6,6 +6,7 @@ module Jekyll
   class Tagger < Generator
 
     safe true
+    priority :normal
 
     def generate(site)
       %w[TAG_PAGE_DIR TAG_FEED_DIR].each do |dir_name|
