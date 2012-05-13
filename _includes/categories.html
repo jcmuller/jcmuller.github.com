@@ -1,8 +1,1 @@
-{% for category in page.categories %}
-<a href="/{{category | downcase}}.html">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
-{% endfor %}
-
-{% for category in post.categories %}
-<a href="/{{category | downcase}}.html">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
-{% endfor %}
-
+{{ page.categories | category_links }}

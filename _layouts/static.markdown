@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>{{ page.title }}</title>
-	</head>
-	<body>
-		{{ content }}
-	</body>
+  <head>
+    <title>{{ page.title }}</title>
+  </head>
+  <body>
+    {{ content }}
+  </body>
 </html>
-
-
