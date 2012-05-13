@@ -1,4 +1,5 @@
 <head>
+  <meta name="google-site-verification" content="xo1qaSArvPxIi0g18A2m4Je-Wqu3BXErGTzuooyByqM" />
 	<title>{{ page.pagetitle }}{{ page.title }}</title>
 	<link rel="stylesheet" href="/css/style.css" />
 	<link rel="stylesheet" href="/css/pygments.css" />
